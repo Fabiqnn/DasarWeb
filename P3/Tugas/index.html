@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Tugas Tambahan</title>
+    <link rel="stylesheet" type="text/CSS" href="stylesheet.css">
+</head>
+
+<body>
+    <form action="" onsubmit="return validateFrom()" name="formDataDiri">
+        <div>
+            <label for="nama">Nama : </label>
+            <input type="text" id="Nama" name="Nama"> <br><br>
+        </div>
+
+        <div>
+            <label for="alamat">Alamat : </label>
+            <textarea name="alamat" id="alamat" rows="10" cols="30"></textarea> <br><br>
+        </div>
+
+        <div>
+            <label for="tanggal-lahir">Tanggal Lahir : </label>
+            <input type="date" id="tanggal-lahir" name="tanggal-lahir"> <br><br>
+        </div>
+        
+        <div class="jenis-kelamin">
+            <label for="jenis-kelamin">Jenis Kelamin : </label>
+            <input type="radio" id="Pria" name="jenis-kelamin" value="Pria">
+            <label for="Pria">Pria</label>
+            <input type="radio" id="Wanita" name="jenis-kelamin" value="Wanita">
+            <label for="Wanita">Wanita</label>
+        </div>
+        <br>
+        <div>
+            <label for="hobi">Hobi : </label>
+            <input type="checkbox" id="Berenang" name="hobi" value="Berenang">
+            <label for="Berenang">Berenang</label>
+            <input type="checkbox" id="Berlari" name="hobi" value="Berlari">
+            <label for="Berlari">Berlari</label>
+            <input type="checkbox" id="Lain-lain" name="hobi" value="Lain-lain">
+            <label for="Lain-lain">Lain-lain</label> 
+        </div>
+        <br>
+        <div>
+            <label for="Pekerjaan">Pekerjaan : </label>
+            <input type="checkbox" id="Swasta" name="Pekerjaan" value="Swasta">
+            <label for="Swasta">Swasta</label>
+            <input type="checkbox" id="PNS" name="Pekerjaan" value="PNS">
+            <label for="PNS">PNS</label>
+            <input type="checkbox" id="Lain-lain" name="Pekerjaan" value="Lain-lain">
+            <label for="Lain-lain">Lain-lain</label>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" id="konfirmasi" name="konfirmasi" value="diterima">
+            <label for="konfirmasi">Check jika anda akan mengirimkan data ini</label>
+        </div>
+
+        <div>
+            <input type="submit" value="Cek!">
+        </div>
+    </form>
+    <script> 
+        function validateFrom() {
+            var nama = document.forms["formDataDiri"]["Nama"].value;
+            var alamat = document.forms["formDataDiri"]["alamat"].value;
+            var tanggalLhr = document.forms["formDataDiri"]["tanggal-lahir"].value;
+            var jenisKelamin = document.forms["formDataDiri"]["jenis-kelamin"].value;
+            var hobi = document.forms["formDataDiri"]["hobi"];
+            var pekerjaan = document.forms["formDataDiri"]["Pekerjaan"];
+        
+            if (nama == "") {
+                alert("Tolong Masukkan nama!")
+                return false;
+            } else if (alamat == "") {
+                alert("Tolong Masukkan alamat!")
+                return false;
+            } else if (tanggalLhr == ""){
+                alert("Tolong Masukkan tanggal lahir!")
+                return false;
+            } else if (jenisKelamin == ""){
+                alert("Tolong Masukkan jenis kelamin!")
+                return false;
+            }
+
+            var hobicheckbox = false;
+            for (var i = 0; i < hobi.length; i++) {
+                if (hobi[i].checked) {
+                    hobicheckbox = true;
+                    break;
+                }
+            }
+
+            if (!hobicheckbox) {
+                alert("Tolong pilih setidaknya satu hobi!")
+                return false;
+            }
+
+            var pekerjaanChecked = false;
+            for (let i = 0; i < pekerjaan.length; i++) {
+                if (pekerjaan[i].checked) {
+                    pekerjaanChecked = true;
+                    break;
+                }
+            }
+
+            if (!pekerjaanChecked) {
+                alert("Tolong pilih setidaknya satu pekerjaan!");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
