@@ -20,7 +20,13 @@
     }
     echo "<br>";
 
-    
+    $pattern2 = '/apple/';
+    $replacement = 'banana';
+    $text2 = 'I like apple pie.';
+    $new_text = preg_replace($pattern2, $replacement, $text2);
+    echo $new_text;
+
+    echo "<br>";
 
     
     
