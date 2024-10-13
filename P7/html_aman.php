@@ -27,7 +27,7 @@
         if (filter_var($email, FILTER_VALIDATE_EMAIL) && isset($email)) {
             echo "Email Valid " . $email;
         } else {
-            echo "Email Tidak Valid.";
+            echo "Email Tidak Valid." . $email;
         }
         
         
