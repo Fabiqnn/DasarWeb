@@ -2,13 +2,13 @@ $(document).ready(function () {
     $('#upload-form').submit(function (e) { 
         e.preventDefault();
         
-        var formData = new FormData(this); // Huruf 'F' pada 'FormData'
+        var formData = new FormData(this); 
 
         $.ajax({
             type: 'POST',
             url: 'upload_ajax.php',
-            data: formData, // Perbaikan typo dari 'fomrData' menjadi 'formData'
-            cache: false,   // Perbaikan dari 'caches' menjadi 'cache'
+            data: formData, 
+            cache: false,   
             contentType: false,
             processData: false,
             success: function (response) {
