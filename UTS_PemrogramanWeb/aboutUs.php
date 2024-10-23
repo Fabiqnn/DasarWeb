@@ -15,7 +15,7 @@
         <a href="index.php" class="logo">Kogichi</a>
         <nav class="navbar">
             <ul class="menu-links">
-                <li><a href="aboutUs.php">About Us</a></li>
+                <li><a href="aboutUs.php">About</a></li>
                 <li><a href="index.php">Menu</a></li>
                 <li>
                     <a href="#">Order <span id="jmlhOrder">0</span></a>
@@ -36,7 +36,7 @@
             <h1>About Us Kogichi</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque perspiciatis rem cum vitae culpa expedita distinctio? Rem quia in, eius voluptatum reiciendis temporibus eligendi? Iusto commodi delectus facere beatae obcaecati!</p>
         </div>
-        
+
         <section class="about">
             <div class="aboutUs-image">
                 <img src="img/minh-anh-nguyen-ndnNP_luXvU-unsplash.jpg" alt="mochi">

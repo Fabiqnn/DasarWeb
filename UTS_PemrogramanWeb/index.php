@@ -19,7 +19,7 @@
         <a href="index.php" class="logo">Kogichi</a>
         <nav class="navbar">
             <ul class="menu-links">
-                <li><a href="aboutUs.php">About Us</a></li>
+                <li><a href="aboutUs.php">About</a></li>
                 <li><a href="index.php">Menu</a></li>
                 <li>
                     <a href="#">Order <span id="jmlhOrder">0</span></a>
