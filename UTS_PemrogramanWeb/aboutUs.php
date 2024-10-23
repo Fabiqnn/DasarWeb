@@ -1,14 +1,20 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link type="text/css" href="styleAboutUs.css" rel="stylesheet">
     <title>About Us Kogichi</title>
 </head>
+
 <body>
     <div class="garis"></div>
     <header>
@@ -23,12 +29,12 @@
             </ul>
         </nav>
         <?php if (isset($_SESSION['status'])): ?>
-            <?php if($_SESSION['status'] == 'login'): ?>
+            <?php if ($_SESSION['status'] == 'login'): ?>
                 <?php echo "<span class = 'username'>Selamat Datang, " . $_SESSION['username'] . "</span>" ?>
             <?php endif; ?>
         <?php else: ?>
             <a class="sign-in" href="formLogin.html"><button class="masuk">Masuk</button></a>
-        <?php endif;?>
+        <?php endif; ?>
     </header>
 
     <div class="kontainer">
@@ -47,7 +53,7 @@
                     distinctio delectus aut ipsam mollitia fuga minima, a voluptatibus consequatur aliquid error nostrum dignissimos commodi <br>
                     tempore magnam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate rem corporis, aut ut earum odio et vel <br>
                     laboriosam possimus molestias esse quam vero perferendis neque cumque fugiat doloremque ullam itaque!</p>
-        
+
                 <h4>Our Values</h4>
                 <ul>
                     <li>Lorem ipsum, dolor sit amet consectetur</li>
@@ -75,6 +81,7 @@
             </div>
         </section>
     </div>
-    
+
 </body>
+
 </html>
