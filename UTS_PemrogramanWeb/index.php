@@ -14,12 +14,13 @@
     <title> Halaman Utama </title>
 </head>
 <body>
+    <div class="garis"></div>
     <header>
-        <a href="#" class="logo">Kogichi</a>
+        <a href="index.php" class="logo">Kogichi</a>
         <nav class="navbar">
             <ul class="menu-links">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Menu</a></li>
+                <li><a href="aboutUs.php">About Us</a></li>
+                <li><a href="index.php">Menu</a></li>
                 <li>
                     <a href="#">Order <span id="jmlhOrder">0</span></a>
                 </li>

@@ -22,7 +22,7 @@ header .logo {
     margin-right: auto;
 }
 
-.menu-links li {
+header .menu-links li {
     font-weight: 500;
     font-size: 16px; 
     display: inline-block;  
@@ -30,13 +30,13 @@ header .logo {
     list-style-type: none;
 }
 
-.menu-links li a {
+header .menu-links li a {
     color: #54473F;
     text-decoration: none;
     transition: all 0.3s ease 0s;
 }
 
-.menu-links li a:hover {
+header .menu-links li a:hover {
     color: #9A7E6F;
 }
 
@@ -75,73 +75,54 @@ nav {
     text-decoration: underline;
 }
 
-#section{
-    text-align: center;
-    padding: 25px 0 10px 0;
-    font-size: 30px;
-    font-weight: 500;
-}
+/* =========================== */
 
-.list-makanan {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 25px;
+.paragraf-atas h1 {
     justify-content: center;
+    text-align: center;
+}
+
+.paragraf-atas p {
     align-items: center;
-    gap: 20px;
 }
 
-.box {
-    flex-direction: column;
-    border-radius: .5rem;
-    width: 300px;
-    height: auto;
+section {
+    display: block;
+    padding: 20px 10%;
+}
+
+.kontainer {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.paragraf-atas {
+    padding: 20px 10%;
+}
+
+.about {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.aboutUs-image {
+    flex: 1;
+    margin-right: 40px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+.aboutUs-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
 }
 
-.box .image img {
-    object-fit: cover;
-    height: 200px;
-    width: 100%;
-    border-radius: .5rem .5rem 0 0;
+h2, p, h4{
+    margin: 5px auto;
 }
 
-.nama-menu {
-    text-align: center;
-    padding: 10px 0;
-    margin: 10px 0;
-}
-
-h3 {
-    font-size: 18px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.nama-menu p {
-    font-size: 16px;
+p {
     font-weight: 450;
-    letter-spacing: 1.5px;
-}
-
-.add {
-    margin-top: 5px;
-    background-color: #E9EED9;
-    color: black;
-    font-weight: 500;
-    padding: 9px 20px;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease 0s;
-}
-
-.add:hover {
-    box-shadow: inset 0  0 0 1px black;
 }
