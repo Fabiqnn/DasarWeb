@@ -1,0 +1,90 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #CBD2A4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.pembungkus {
+    background: #E9EED9;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 1000px;
+}
+
+.pembungkus .gambar img{
+    height: 600px;
+    object-fit: cover;
+}
+
+.pembungkus .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.pembungkus form h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+}
+
+.pembungkus form .input-box {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.pembungkus form .input-box label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.pembungkus form .input-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.pembungkus form .input-box input:focus {
+    border-color: #888;
+}
+
+.pembungkus form .submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #CBD2A4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pembungkus form .submit:hover {
+    background-color: #aeb78d;
+}

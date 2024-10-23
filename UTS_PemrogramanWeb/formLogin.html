@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleLogin.css" type="text/css">
+    <title>Masuk</title>
+</head>
+<body>
+    <div class="pembungkus">
+        <div class="gambar">
+            <img src="img/shayan-ramesht-exSEmuA7R7k-unsplash.jpg">
+        </div>
+        <div class="form">
+            <form action="formValidation.php" method="post" id="form-login" onsubmit="return validateForm()">
+                <h1>Pemesanan Makanan</h1>
+                <div class="input-box">
+                    <label for="no-meja">Masukkan Kode Meja</label> <br>
+                    <input type="text" name="no-meja"> 
+                </div>
+                <div class="input-box">
+                    <label for="user">Masukkan Nama Pelanggan</label> <br>
+                    <input type="text" name="user"> 
+                </div>
+                <input type="submit" value="Masuk" class="submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        function validateForm() {
+            let noMeja = document.forms["form-login"]["no-meja"].value;
+            let user = document.forms["form-login"]["user"].value;
+
+            if (noMeja === "" || user === "") {
+                alert ("Form Tidak Boleh Kosong!")
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
