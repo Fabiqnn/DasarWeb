@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="InsertForm.css" type="text/css">
+    <title>Insert Form</title>
+</head>
+<body>
+    <div class="pembungkus">
+        <h2>Insert Menu</h2>
+        <div class="form">
+            <form action="post" id="form-insert" onsubmit="return validateForm()">
+                <div class="input-box">
+                    <label for="nama-menu">Masukkan Nama Menu</label>
+                    <input type="text" name="nama-menu">
+                </div>
+                <div class="input-box">
+                    <label for="harga">Masukkan Harga</label>
+                    <input type="text" name="harga">
+                </div>
+                <input type="submit" value="Insert" class="submit">
+            </form>    
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            let namaMenu = document.forms["form-insert"]["nama-menu"].value;
+            let harga = document.forms["form-insert"]["harga"].value;
+
+            if (namaMenu === "" || harga === "") {
+                alert("Form Tidak Boleh Kosong");
+                return false;
+            }
+            return true
+        }
+    </script>
+</body>
+</html>
