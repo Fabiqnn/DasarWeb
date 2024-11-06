@@ -44,7 +44,7 @@
                     <tr>
                         <td><?php echo $row['menu_id']; ?></td>
                         <td><?php echo $row['nama_menu']; ?></td>
-                        <td><?php echo $row['deskripsi_menu']?></td>
+                        <td><?php echo $row['deskripsi_menu'] ?></td>
                         <td><?php echo $row['harga']; ?></td>
                         <td><button class="update" onclick="window.location.href='update.php?id=<?php echo $row['menu_id']; ?>'">Update</button></td>
                         <td><button class="delete" onclick="confirmation(<?php echo $row['menu_id']; ?>)">Delete</button></td>
@@ -67,18 +67,18 @@
                     </div>
                     <div class="modal-body">
                         <div class="form">
-                                <div class="form-group">
-                                    <label for="nama">Nama Menu</label> 
-                                    <input type="text" name="nama" class="kontrol"> 
-                                </div>
-                                <div class="form-group">
-                                    <label for="deskripsi">Deskripsi Menu</label> 
-                                    <input type="text" name="deskripsi" class="kontrol"> 
-                                </div>
-                                <div class="form-group">
-                                    <label for="harga">Harga</label> 
-                                    <input type="number" name="harga" class="kontrol"> 
-                                </div>
+                            <div class="form-group">
+                                <label for="nama">Nama Menu</label>
+                                <input type="text" name="nama" class="kontrol">
+                            </div>
+                            <div class="form-group">
+                                <label for="deskripsi">Deskripsi Menu</label>
+                                <input type="text" name="deskripsi" class="kontrol">
+                            </div>
+                            <div class="form-group">
+                                <label for="harga">Harga</label>
+                                <input type="number" name="harga" class="kontrol">
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -104,9 +104,9 @@
         }
 
         function confirmation(menuId) {
-            let text = "Apakah Anda Benar Ingin Menghapus Data Berikut?"
+            let text = "Apakah Anda Benar Ingin Menghapus Menu Berikut?"
             if (confirm(text) == true) {
-                window.location.href='delete.php?id=' + menuId;
+                window.location.href = 'delete.php?id=' + menuId;
             }
         }
     </script>

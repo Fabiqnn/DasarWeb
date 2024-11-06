@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,8 @@
             font-family: "Montserrat", sans-serif;
         }
 
-        html, body {
+        html,
+        body {
             width: 100%;
             height: 100%;
             background-color: #f1f1f1;
@@ -111,9 +113,9 @@
         .form-group button:hover {
             background-color: rgba(138, 127, 78, 0.8);
         }
-
     </style>
 </head>
+
 <body>
     <div class="garis"></div>
     <header>
@@ -121,7 +123,7 @@
     </header>
     <div class="box1">
 
-    <?php 
+        <?php
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
 
@@ -130,21 +132,43 @@
             $result = sqlsrv_query($conn, $querry);
 
             if (!$result) {
-                die("Querry Gagal Dijalankan". sqlsrv_errors());
-            } 
+                die("Querry Gagal Dijalankan" . sqlsrv_errors());
+            }
 
-            $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
+            $row = sqlsrv_fetch_array($result);
 
             if ($row == null) {
                 die("gaonok");
             }
-            
         }
-    ?>
+        ?>
+
+
+        <?php
+        if (isset($_POST['update'])) {
+            if (isset($_GET['id_new'])) {
+                $newId = $_GET['id_new'];
+            }
+            $namaBaru = $_POST['nama'];
+            $deskripsiBaru = $_POST['deskripsi'];
+            $hargaBaru = $_POST['harga'];
+            $params = array($namaBaru, $deskripsiBaru, $hargaBaru, $newId);
+
+            $querry = "UPDATE menu SET nama_menu = ?, deskripsi_menu = ?, harga = ? WHERE menu_id = ?";
+
+            $result = sqlsrv_query($conn, $querry, $params);
+
+            if (!$result) {
+                die("Gagal Melakukan Update" . sqlsrv_errors());
+            } else {
+                header("location: index.php");
+            }
+        }
+        ?>
 
         <div class="form">
             <h4>Update Data Menu</h4>
-            <form action="" method="POST">
+            <form action="update.php?id_new=<?php echo $id ?>" method="POST">
                 <div class="form-group">
                     <label for="nama">Nama Menu</label>
                     <input type="text" name="nama" id="nama" class="kontrol" value="<?php echo $row['nama_menu'] ?>">
@@ -164,4 +188,5 @@
         </div>
     </div>
 </body>
+
 </html>
