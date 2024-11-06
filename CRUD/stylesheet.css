@@ -5,19 +5,26 @@
     font-family: "Montserrat", sans-serif;
 }
 
-header {
-    padding: 20px 0;
-    background-color: rgba(154, 126, 111, 0.542);
-    /* text-align: center; */
-    display: flex;
+.garis {
+    min-height: 10px;
+    background-color: rgb(154, 126, 111);
 }
 
-header .title {
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: rgba(154, 126, 111, 0.542);
+    box-shadow: 0 10px 5px -10px rgba(0, 0, 0, 0.3);
+}
+
+header .logo {
     color: #54473F;
-    text-decoration: none;
     font-size: 25px;
+    text-decoration: none;
     font-weight: 500;
-    
+    margin-right: auto;
 }
 
 .box1 {
@@ -31,13 +38,13 @@ header .title {
     font-size: 35px;
 }
 
-.box1 button {
+.box1 #tambah-menu {
     float: right;
     padding: 10px 20px;
     font-size: 20px;
     font-weight: 400;
     word-spacing: 3px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     background-color: #147ac3;
     border: none;
     border-radius: 5px;
@@ -45,7 +52,7 @@ header .title {
     transition: all 0.3s ease 0s;
 }
 
-.box1 button:hover {
+.box1 #tambah-menu:hover {
     background-color: rgba(20, 122, 195, 0.75);
 }
 
@@ -64,6 +71,40 @@ table, th, td {
 th {
     background-color: rgb(211, 211, 211, 0.7)
     ;
+}
+
+table .update {
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 20px;
+    font-weight: 400;
+    word-spacing: 3px;
+    background-color: rgba(36, 160, 67, 0.7); 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+table .update:hover {
+    background-color: rgba(36, 160, 67, 0.5);
+}
+
+table .delete {
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 20px;
+    font-weight: 400;
+    word-spacing: 3px;
+    background-color: rgba(248, 108, 77);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+table .delete:hover {
+    background-color: rgba(248, 108, 77, 0.7);
 }
 
 .form-group {
